@@ -44,10 +44,10 @@
     </div>
 
     <!-- Main Content Container -->
-    <div class="relative z-10 flex flex-col min-h-screen max-w-5xl mx-auto px-6 pt-12 pb-24">
+    <div class="relative z-10 flex flex-col min-h-screen max-w-6xl mx-auto px-6 pt-12 pb-24">
         
         <!-- Navigation -->
-        <nav class="flex justify-between items-center mb-24">
+        <nav class="flex justify-between items-center mb-20">
             <div class="text-2xl font-bold text-white tracking-tighter">Evie.</div>
             <a href="https://github.com/askevie" target="_blank" class="text-sm font-medium hover:text-white transition-colors border border-slate-800 px-4 py-2 rounded-full glass">
                 GitHub Org
@@ -62,7 +62,7 @@
             </div>
             
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
-                Control your desktop with <br/>
+                Control your Mac with <br/>
                 <span class="gradient-text">pure semantic intent.</span>
             </h1>
             
@@ -71,7 +71,7 @@
             </p>
 
             <!-- Call to Action -->
-            <div class="flex gap-4 mb-20">
+            <div class="flex gap-4 mb-24">
                 <a href="mailto:founder@askevie.dev?subject=Waitlist%20Access" class="px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-slate-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.3)]">
                     Join Early Access
                 </a>
@@ -80,37 +80,83 @@
                 </a>
             </div>
 
-            <!-- Terminal / Architecture Mockup (Motion.dev style) -->
-            <div class="w-full max-w-3xl glass rounded-xl overflow-hidden shadow-2xl border-slate-800 text-left mb-24">
-                <!-- Terminal Header -->
-                <div class="bg-slate-900/50 px-4 py-3 border-b border-slate-800 flex items-center gap-2">
-                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                    <span class="ml-4 text-xs text-slate-500 font-mono">evie-core-router ~ execution.log</span>
-                </div>
-                <!-- Terminal Body -->
-                <div class="p-6 font-mono text-sm md:text-base text-slate-300 space-y-2">
-                    <p><span class="text-green-400">➜</span> <span class="text-blue-400">evie</span> init --model claude-3.5-sonnet</p>
-                    <p class="text-slate-500">[System] Initializing local execution graph...</p>
-                    <p class="text-slate-500">[System] Loading Python + FastAPI backend...</p>
-                    <p class="text-slate-500">[System] Binding PyObjC & Quartz to macOS AppKit...</p>
-                    <p class="text-purple-400">✓ Semantic router ready. Waiting for intent...</p>
+            <!-- Architecture Grid Section -->
+            <div class="w-full text-left mb-24">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">System Architecture</h2>
+                <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto">Engineered for 8GB Apple Silicon hardware. Perfect privacy, zero background CPU drain, and sub-500ms latency.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Layer 1: Audio -->
+                    <div class="glass p-8 rounded-2xl hover:border-purple-500/30 transition-colors">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-white font-semibold text-lg">1. The Audio Layer <span class="text-slate-500 text-sm font-normal">(Ears)</span></h3>
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-green-500/10 text-green-400 rounded border border-green-500/20">Finalized & Audited</span>
+                        </div>
+                        <ul class="text-sm text-slate-400 space-y-3">
+                            <li><strong class="text-slate-300">Wake Word:</strong> <code>livekit-wakeword</code> (ONNX) running silently at ~1% CPU.</li>
+                            <li><strong class="text-slate-300">STT:</strong> <code>whisper.cpp</code> (tiny.en) optimized for Metal framework for ~100ms processing.</li>
+                            <li><strong class="text-slate-300">Buffer:</strong> Python 300ms ring buffer to guarantee no dropped syllables.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Layer 2: Perception -->
+                    <div class="glass p-8 rounded-2xl hover:border-blue-500/30 transition-colors">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-white font-semibold text-lg">2. The Perception Layer <span class="text-slate-500 text-sm font-normal">(Eyes)</span></h3>
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-green-500/10 text-green-400 rounded border border-green-500/20">Finalized & Audited</span>
+                        </div>
+                        <ul class="text-sm text-slate-400 space-y-3">
+                            <li><strong class="text-slate-300">Capture:</strong> Apple ScreenCaptureKit via Swift bridge. 0ms sampling, 0% CPU footprint.</li>
+                            <li><strong class="text-slate-300">Fast Vision:</strong> Apple Native OCR executing on Neural Engine in ~30ms.</li>
+                            <li><strong class="text-slate-300">Deep Vision:</strong> YOLOv11-Nano via CoreML for UI element detection without triggering swap memory.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Layer 3: Decision -->
+                    <div class="glass p-8 rounded-2xl hover:border-purple-500/30 transition-colors">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-white font-semibold text-lg">3. The Decision Layer <span class="text-slate-500 text-sm font-normal">(Brain)</span></h3>
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-purple-500/10 text-purple-400 rounded border border-purple-500/20">Architecture Planned</span>
+                        </div>
+                        <ul class="text-sm text-slate-400 space-y-3">
+                            <li><strong class="text-slate-300">Micro-Router (Edge):</strong> Featherweight NLP slicing semantic boundaries in ~2ms for offline commands.</li>
+                            <li><strong class="text-slate-300">Macro-Planner (Cloud):</strong> Routing complex logic to Claude 3.5 Sonnet / Gemini 1.5 Pro for structured JSON sequential payloads.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Layer 4: Execution -->
+                    <div class="glass p-8 rounded-2xl hover:border-blue-500/30 transition-colors">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-white font-semibold text-lg">4. The Execution Layer <span class="text-slate-500 text-sm font-normal">(Hands)</span></h3>
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-purple-500/10 text-purple-400 rounded border border-purple-500/20">Architecture Planned</span>
+                        </div>
+                        <ul class="text-sm text-slate-400 space-y-3">
+                            <li><strong class="text-slate-300">Global Sandbox:</strong> macOS Quartz framework synthesizing true hardware-level HID inputs.</li>
+                            <li><strong class="text-slate-300">State Resolution:</strong> AppKit monitoring active frontmost windows for exact target disambiguation.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Layer 5: Security (Spans both columns) -->
+                    <div class="glass p-8 rounded-2xl md:col-span-2 border-red-500/20 bg-red-500/5 hover:border-red-500/40 transition-colors">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-white font-semibold text-lg">5. GCSP Security Sandbox <span class="text-slate-500 text-sm font-normal">(Firewall)</span></h3>
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-purple-500/10 text-purple-400 rounded border border-purple-500/20">Architecture Planned</span>
+                        </div>
+                        <p class="text-sm text-slate-400 max-w-4xl">
+                            A strict interception layer separating the Macro-Planner from Execution. Validates all proposed UI actions against security policies to mitigate <strong>Indirect Prompt Injection</strong>, preventing malicious web text from triggering terminal operations or data extraction.
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Founder / Tech Stack Section -->
-            <div class="grid md:grid-cols-2 gap-8 w-full text-left mb-16">
-                <div class="glass p-8 rounded-2xl">
-                    <h3 class="text-white font-semibold text-lg mb-2">Built for Performance</h3>
-                    <p class="text-slate-400 text-sm">
-                        Bootstrapped and engineered in Hyderabad. Utilizing Claude 3.5 Sonnet for multimodal screen context parsing and strictly structured tool calls to avoid brittle regex shortcuts.
-                    </p>
-                </div>
-                <div class="glass p-8 rounded-2xl">
+            <!-- Founder Section -->
+            <div class="w-full text-center mb-16">
+                <div class="glass p-8 rounded-2xl inline-block max-w-2xl w-full text-left">
                     <h3 class="text-white font-semibold text-lg mb-2">The Founder</h3>
                     <p class="text-slate-400 text-sm mb-4">
-                        Evie is being actively developed by an independent founder currently focused on solving local AI execution and complex macOS UI automation.
+                        Evie is a bootstrapped startup based in Hyderabad, currently in active R&D. The architecture is engineered from scratch utilizing Python, FastAPI, PyObjC, and Quartz to push the limits of local AI desktop integration.
                     </p>
                     <a href="https://www.linkedin.com/in/tagorenandan/?isSelfProfile=true" target="_blank" class="text-purple-400 text-sm hover:text-purple-300 font-medium">LinkedIn Profile →</a>
                 </div>
@@ -123,11 +169,11 @@
                 &copy; 2026 Evie. All rights reserved. | Hyderabad, Telangana, India.
             </div>
             <div class="flex gap-4">
-                <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
-                <a href="mailto:founder@askevie.dev" class="hover:text-slate-300 transition-colors">founder@askevie.dev</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+                <a href="mailto:founder@askevie.dev" class="hover:text-slate-400 transition-colors">founder@askevie.dev</a>
             </div>
         </footer>
     </div>
 </body>
-</html> 
+</html>
